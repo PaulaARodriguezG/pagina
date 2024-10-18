@@ -149,7 +149,16 @@ aside#der{
 	width:200px;
 	height:453px;
 	}
-	
+	.contacto {
+		margin: auto;
+		background-color: rgb(220, 233, 233);
+		width: 1000px;
+	}
+
+	.tit{
+		font-family: 'Kaushan Script', cursive;
+	}
+
 footer{
 	position:relative;
 	margin:20px auto;
@@ -255,10 +264,37 @@ footer{
 
 <!-- Cierra Sección -->
 
+<!-- javaScript inicia -->
+ <br>
+ <br>
+ <br>
+ <div class="contacto">
+		<h1 class="tit">Contactanos</h1>
+		<p >Si desea que nos comuniquemos con usted escriba su numero de celular</p>
+		
+		<input type="number" id="Numero" placeholder="Numero de celular">
+		<button onclick="clientes()">Enviar</button>
+		
+		<p id="resultado"></p>
+
+ <script >
+
+function clientes() {
+	const numero = parseInt(document.getElementById('Numero').value);
+	if (numero <9999999999 ) {
+		document.getElementById('resultado').textContent = `Tan pronto leamos tu mensaje nos pondremos en contacto`;
+	} 
+	else {
+		document.getElementById('resultado').textContent = 'El numero ingresado no es correcto';
+	}
+}
+ </script>
+
+ </div>
+   
+<!-- javaScript cierra -->
+
 <!-- Inicia Pie de Página -->
-<br>
-<br>
-<br>
 <footer>
 
 	&copy; Todos los derechos reservados.
